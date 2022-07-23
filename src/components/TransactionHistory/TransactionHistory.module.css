@@ -1,0 +1,28 @@
+.transaction-history {
+    min-width: 350px;
+    max-width: 600px;
+    width: 100%;
+}
+
+.header_wrapper {
+    background-color: rgb(0, 255, 255);
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+th, td {
+    padding: 5px 15px;
+}
+
+td {
+    text-align: center;
+}
+
+.rowWhite {
+    background-color: #fff;
+}
+
+.rowGray {
+    background-color: rgb(239, 239, 239);
+}
