@@ -1,17 +1,13 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import styles from './FriendList.module.css';
+import FriendListItem from './FriendListItem/FriendListItem';
 
 const FriendList = ({ friends = [] }) => {
-
     return (
-        <ul className={styles['friend-list}']}>
+        <ul>
             {friends.map(el => {
-                return <li className={styles.item} key={el.id}>
-                    <span className={el.isOnline ? styles.statusOnline : styles.statusOfline}></span>
-                    <img className={styles.avatar} src={el.avatar} alt="User avatar" width="48" />
-                    <p className={styles.name}>{el.name}</p>
-                </li>
+                const { id = '', isOnline = false, avatar = '', name = '' } = el;
+                return <FriendListItem key={id} isOnline={isOnline} avatar={avatar} name={name} />
             })}
         </ul>
     )

@@ -8,9 +8,10 @@ const Statistics = ({ title = '', stats = [] }) => {
             {title && <h2 className={styles.title}>{title}</h2>}
             <ul className={styles.statList}>
                 {stats.map((el, ind) => {
-                    return <li className={`${styles.item} ${styles['item' + (ind + 1)]}`} key={el.id}>
-                        <span className="label">{el.label}</span>
-                        <span className="percentage">{el.percentage}%</span>
+                    const {id = '', label = '', percentage = ''} = el;
+                    return <li className={`${styles.item} ${styles['item' + (ind + 1)]}`} key={id}>
+                        <span className="label">{label}</span>
+                        <span className="percentage">{percentage}%</span>
                     </li>
                 })}
             </ul>
